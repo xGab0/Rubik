@@ -1,0 +1,77 @@
+[
+  {
+    "name": "WAITING",
+    "conditions": {
+      "online": {
+        "enabled": true,
+        "value": 16,
+        "state": "STARTING"
+      },
+      "duration": {
+        "enabled": false,
+        "value": -1,
+        "state": "WAITING"
+      }
+    }
+  },
+  {
+    "name": "STARTING",
+    "conditions": {
+      "online": {
+        "enabled": true,
+        "value": 15,
+        "state": "WAITING"
+      },
+      "duration": {
+        "enabled": true,
+        "value": 20,
+        "state": "GAME"
+      }
+    }
+  },
+  {
+    "name": "GAME",
+    "conditions": {
+      "online": {
+        "enabled": true,
+        "value": 1,
+        "state": "WAITING"
+      },
+      "duration": {
+        "enabled": true,
+        "value": 36000,
+        "state": "DRAGONS"
+      }
+    }
+  },
+  {
+    "name": "DRAGONS",
+    "conditions": {
+      "online": {
+        "enabled": true,
+        "value": 1,
+        "state": "WAITING"
+      },
+      "duration": {
+        "enabled": false,
+        "value": -1,
+        "state": "WAITING"
+      }
+    }
+  },
+  {
+    "name": "END",
+    "conditions": {
+      "online": {
+        "enabled": true,
+        "value": 1,
+        "state": "WAITING"
+      },
+      "duration": {
+        "enabled": true,
+        "value": 20,
+        "state": "WAITING"
+      }
+    }
+  }
+]

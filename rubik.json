@@ -1,0 +1,70 @@
+{
+  "states": {
+    "list": [
+      "waiting",
+      "starting",
+      "game",
+      "dragons",
+      "end"
+    ],
+    "default_state": "waiting"
+  },
+  "theater": {
+    "watchers": [
+      "blue",
+      "green",
+      "red",
+      "yellow"
+    ],
+    "actors": [
+      "blue",
+      "green",
+      "red",
+      "yellow"
+    ]
+  },
+  "vox": {
+    "channels": [
+      "teamchat:blue",
+      "teamchat:green",
+      "teamchat:red",
+      "teamchat:yellow",
+      "watchers:globalchat",
+      "actors:globalchat"
+    ],
+    "groups": [
+      "teamchat:blue",
+      "teamchat:green",
+      "teamchat:red",
+      "teamchat:yellow"
+    ]
+  },
+  "persona": {
+    "groups": [
+      "watchers:staff",
+      "watchers:blue",
+      "watchers:green",
+      "watchers:red",
+      "watchers:yellow",
+      "actors:waiting",
+      "actors:blue",
+      "actors:green",
+      "actors:red",
+      "actors:yellow"
+    ]
+  },
+  "stele": {
+    "actionbars": [
+      "watchers",
+      "actors"
+    ],
+    "bossbars": [
+      "watchers",
+      "actors"
+    ],
+    "sidebars": [
+      "watchers",
+      "actors"
+    ]
+  }
+}
