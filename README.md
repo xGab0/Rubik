@@ -47,10 +47,12 @@ Here we have the overview of the config with all informations.
   },
   "persona": {
     "groups": [
+      "watchers:staff",
       "watchers:blue",
       "watchers:green",
       "watchers:red",
       "watchers:yellow",
+      "actors:waiting"
       "actors:blue",
       "actors:green",
       "actors:red",
@@ -166,9 +168,20 @@ persona/groups/en.json
 ```json
 [
   {
+    "name": "watchers:staff",
+    "skin": "",
+    "chat": "<bold><gray>staff<gradient></bold><white> %player% <dark_gray>➠ <white>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><gray>STAFF</gray></bold> <white>%player%"
+      ]
+    }
+  },
+  {
     "name": "watchers:blue",
     "skin": "",
-    "chat": "<bold><blue>blue<gradient></bold><aqua> %player% <dark_gray>➠ <color:aqua>%message%",
+    "chat": "<bold><blue>blue<gradient></bold><aqua> %player% <dark_gray>➠ <aqua>%message%",
     "tag": {
       "interval": 7,
       "frames": [
@@ -179,7 +192,7 @@ persona/groups/en.json
   {
     "name": "watchers:green",
     "skin": "",
-    "chat": "<bold><dark_green>green<gradient></bold><green> %player% <dark_gray>➠ <color:green>%message%",
+    "chat": "<bold><dark_green>green<gradient></bold><green> %player% <dark_gray>➠ <green>%message%",
     "tag": {
       "interval": 7,
       "frames": [
@@ -190,7 +203,7 @@ persona/groups/en.json
   {
     "name": "watchers:red",
     "skin": "",
-    "chat": "<bold><dark_red>red<gradient></bold><red> %player% <dark_gray>➠ <color:red>%message%",
+    "chat": "<bold><dark_red>red<gradient></bold><red> %player% <dark_gray>➠ <red>%message%",
     "tag": {
       "interval": 7,
       "frames": [
@@ -201,7 +214,7 @@ persona/groups/en.json
   {
     "name": "watchers:yellow",
     "skin": "",
-    "chat": "<bold><gold>yellow<gradient></bold><yellow> %player% <dark_gray>➠ <color:yellow>%message%",
+    "chat": "<bold><gold>yellow<gradient></bold><yellow> %player% <dark_gray>➠ <yellow>%message%",
     "tag": {
       "interval": 7,
       "frames": [
@@ -209,15 +222,81 @@ persona/groups/en.json
       ]
     }
   },
+  {
+    "name": "actors:waiting",
+    "skin": "",
+    "chat": "<bold><gray>user<gradient></bold><white> %player% <dark_gray>➠ <white>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><gray>USER</gray></bold> <white>%player%"
+      ]
+    }
+  },
+  {
+    "name": "actors:blue",
+    "skin": "",
+    "chat": "<bold><blue>blue<gradient></bold><aqua> %player% <dark_gray>➠ <aqua>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><blue>BLUE</blue></bold> <aqua>%player%"
+      ]
+    }
+  },
+  {
+    "name": "actors:green",
+    "skin": "",
+    "chat": "<bold><dark_green>green<gradient></bold><green> %player% <dark_gray>➠ <green>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><dark_green>GREEN</dark_green></bold> <green>%player%"
+      ]
+    }
+  },
+  {
+    "name": "actors:red",
+    "skin": "",
+    "chat": "<bold><dark_red>red<gradient></bold><red> %player% <dark_gray>➠ <red>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><dark_red>RED</red></bold> <red>%player%"
+      ]
+    }
+  },
+  {
+    "name": "actors:yellow",
+    "skin": "",
+    "chat": "<bold><gold>yellow<gradient></bold><yellow> %player% <dark_gray>➠ <yellow>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><gold>YELLOW</red></bold> <yellow>%player%"
+      ]
+    }
+  }
 ]
 ```
 persona/groups/it.json
 ```json
 [
   {
+    "name": "watchers:staff",
+    "skin": "",
+    "chat": "<bold><gray>staff<gradient></bold><white> %player% <dark_gray>➠ <white>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><gray>STAFF</gray></bold> <white>%player%"
+      ]
+    }
+  },
+  {
     "name": "watchers:blue",
     "skin": "",
-    "chat": "<bold><blue>blu<gradient></bold><aqua> %player% <dark_gray>➠ <color:aqua>%message%",
+    "chat": "<bold><blue>blu<gradient></bold><aqua> %player% <dark_gray>➠ <aqua>%message%",
     "tag": {
       "interval": 7,
       "frames": [
@@ -228,7 +307,7 @@ persona/groups/it.json
   {
     "name": "watchers:green",
     "skin": "",
-    "chat": "<bold><dark_green>verde<gradient></bold><green> %player% <dark_gray>➠ <color:green>%message%",
+    "chat": "<bold><dark_green>verde<gradient></bold><green> %player% <dark_gray>➠ <green>%message%",
     "tag": {
       "interval": 7,
       "frames": [
@@ -239,7 +318,7 @@ persona/groups/it.json
   {
     "name": "watchers:red",
     "skin": "",
-    "chat": "<bold><dark_red>rosso<gradient></bold><red> %player% <dark_gray>➠ <color:red>%message%",
+    "chat": "<bold><dark_red>rosso<gradient></bold><red> %player% <dark_gray>➠ <red>%message%",
     "tag": {
       "interval": 7,
       "frames": [
@@ -250,7 +329,7 @@ persona/groups/it.json
   {
     "name": "watchers:yellow",
     "skin": "",
-    "chat": "<bold><gold>giallo<gradient></bold><yellow> %player% <dark_gray>➠ <color:yellow>%message%",
+    "chat": "<bold><gold>giallo<gradient></bold><yellow> %player% <dark_gray>➠ <yellow>%message%",
     "tag": {
       "interval": 7,
       "frames": [
@@ -258,5 +337,60 @@ persona/groups/it.json
       ]
     }
   },
+  {
+    "name": "actors:waiting",
+    "skin": "",
+    "chat": "<bold><gray>utente<gradient></bold><white> %player% <dark_gray>➠ <white>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><gray>UTENTE</gray></bold> <white>%player%"
+      ]
+    }
+  },
+  {
+    "name": "actors:blue",
+    "skin": "",
+    "chat": "<bold><blue>blu<gradient></bold><aqua> %player% <dark_gray>➠ <aqua>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><blue>BLU</blue></bold> <aqua>%player%"
+      ]
+    }
+  },
+  {
+    "name": "actors:green",
+    "skin": "",
+    "chat": "<bold><dark_green>verde<gradient></bold><green> %player% <dark_gray>➠ <green>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><dark_green>VERDE</dark_green></bold> <green>%player%"
+      ]
+    }
+  },
+  {
+    "name": "actors:red",
+    "skin": "",
+    "chat": "<bold><dark_red>rosso<gradient></bold><red> %player% <dark_gray>➠ <red>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><dark_red>ROSSO</red></bold> <red>%player%"
+      ]
+    }
+  },
+  {
+    "name": "actors:yellow",
+    "skin": "",
+    "chat": "<bold><gold>giallo<gradient></bold><yellow> %player% <dark_gray>➠ <yellow>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><gold>GIALLO</red></bold> <yellow>%player%"
+      ]
+    }
+  }
 ]
 ```
