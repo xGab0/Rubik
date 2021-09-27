@@ -55,14 +55,20 @@
   },
   "stele": {
     "actionbars": [
+      "waiting",
+      "starting",
       "watchers",
       "actors"
     ],
     "bossbars": [
+      "waiting",
+      "starting",
       "watchers",
       "actors"
     ],
     "sidebars": [
+      "waiting",
+      "starting",
       "watchers",
       "actors"
     ]
