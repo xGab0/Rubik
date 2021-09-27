@@ -9,8 +9,8 @@ Here we have the overview of the config with all informations.
     "list": [
       "waiting",
       "starting",
-      "pregame",
       "game",
+      "dragons",
       "end"
     ],
     "default_state": "waiting"
@@ -77,13 +77,186 @@ Here we have the overview of the config with all informations.
 ### 📜 State json config
 ```json
 {
-  "states": [
-    "waiting",
-    "starting",
-    "pregame",
-    "game",
-    "end"
-  ],
-  "default_state": "waiting"
+  "name": "WAITING",
+  "conditions": {
+    "online": {
+      "enabled": true,
+      "value": 16,
+      "state": "STARTING"
+    },
+    "duration": {
+      "enabled": false,
+      "value": -1,
+      "state": "WAITING"
+    }
+  },
 }
+```
+```json
+{
+  "name": "STARTING",
+  "conditions": {
+    "online": {
+      "enabled": true,
+      "value": 15,
+      "state": "WAITING"
+    },
+    "duration": {
+      "enabled": true,
+      "value": 20,
+      "state": "GAME"
+    }
+  },
+}
+```
+```json
+{
+  "name": "GAME",
+  "conditions": {
+    "online": {
+      "enabled": true,
+      "value": 1,
+      "state": "WAITING"
+    },
+    "duration": {
+      "enabled": true,
+      "value": 36000,
+      "state": "DRAGONS"
+    }
+  },
+}
+```
+```json
+{
+  "name": "DRAGONS",
+  "conditions": {
+    "online": {
+      "enabled": true,
+      "value": 1,
+      "state": "WAITING"
+    },
+    "duration": {
+      "enabled": false,
+      "value": -1,
+      "state": "WAITING"
+    }
+  },
+}
+```
+```json
+{
+  "name": "END",
+  "conditions": {
+    "online": {
+      "enabled": true,
+      "value": 1,
+      "state": "WAITING"
+    },
+    "duration": {
+      "enabled": true,
+      "value": 20,
+      "state": "WAITING"
+    }
+  },
+}
+```
+
+### 📜 Persona json config
+persona/groups/en.json
+```json
+[
+  {
+    "name": "watchers:blue",
+    "skin": "",
+    "chat": "<bold><blue>blue<gradient></bold><aqua> %player% <dark_gray>➠ <color:aqua>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><blue>BLUE</blue></bold> <aqua>%player%"
+      ]
+    }
+  },
+  {
+    "name": "watchers:green",
+    "skin": "",
+    "chat": "<bold><dark_green>green<gradient></bold><green> %player% <dark_gray>➠ <color:green>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><dark_green>GREEN</dark_green></bold> <green>%player%"
+      ]
+    }
+  },
+  {
+    "name": "watchers:red",
+    "skin": "",
+    "chat": "<bold><dark_red>red<gradient></bold><red> %player% <dark_gray>➠ <color:red>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><dark_red>RED</red></bold> <red>%player%"
+      ]
+    }
+  },
+  {
+    "name": "watchers:yellow",
+    "skin": "",
+    "chat": "<bold><gold>yellow<gradient></bold><yellow> %player% <dark_gray>➠ <color:yellow>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><gold>YELLOW</red></bold> <yellow>%player%"
+      ]
+    }
+  },
+]
+```
+persona/groups/it.json
+```json
+[
+  {
+    "name": "watchers:blue",
+    "skin": "",
+    "chat": "<bold><blue>blu<gradient></bold><aqua> %player% <dark_gray>➠ <color:aqua>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><blue>BLU</blue></bold> <aqua>%player%"
+      ]
+    }
+  },
+  {
+    "name": "watchers:green",
+    "skin": "",
+    "chat": "<bold><dark_green>verde<gradient></bold><green> %player% <dark_gray>➠ <color:green>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><dark_green>VERDE</dark_green></bold> <green>%player%"
+      ]
+    }
+  },
+  {
+    "name": "watchers:red",
+    "skin": "",
+    "chat": "<bold><dark_red>rosso<gradient></bold><red> %player% <dark_gray>➠ <color:red>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><dark_red>ROSSO</red></bold> <red>%player%"
+      ]
+    }
+  },
+  {
+    "name": "watchers:yellow",
+    "skin": "",
+    "chat": "<bold><gold>giallo<gradient></bold><yellow> %player% <dark_gray>➠ <color:yellow>%message%",
+    "tag": {
+      "interval": 7,
+      "frames": [
+          "<bold><gold>GIALLO</red></bold> <yellow>%player%"
+      ]
+    }
+  },
+]
 ```
