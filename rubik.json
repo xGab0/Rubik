@@ -60,12 +60,7 @@
       "watchers",
       "actors"
     ],
-    "bossbars": [
-      "waiting",
-      "starting",
-      "watchers",
-      "actors"
-    ],
+    "bossbars": [],
     "sidebars": [
       "waiting",
       "starting",
