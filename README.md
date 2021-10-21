@@ -1,2 +1,1 @@
-# Rubik
-This is an example of a Rubik config designed for a 4x4x4x4 Bedwars game.
+Sto spostando tutto su un altra repo più based, eliminerò questo repo meno based quando la bedrock edition supporterà le mesh shaders
